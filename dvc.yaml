@@ -1,0 +1,17 @@
+stages:
+  convert_model:
+    cmd: python convert.py
+    deps:
+      - mineral_classification_model.keras
+      - convert.py
+    outs:
+      - model.onnx
+
+  test_model:
+    cmd: python test.py
+    deps:
+      - model.onnx
+      - test.py
+      - Cobre (1).jpg  # O cualquier imagen de prueba que estés utilizando
+    outs:
+      - predictions.txt
