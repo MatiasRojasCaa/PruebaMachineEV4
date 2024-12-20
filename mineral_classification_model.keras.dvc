@@ -1,0 +1,5 @@
+outs:
+- md5: 36615c2709490cbc711f4dcbfa2a6d03
+  size: 134077626
+  hash: md5
+  path: mineral_classification_model.keras
